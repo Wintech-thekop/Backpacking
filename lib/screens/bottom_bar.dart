@@ -1,3 +1,4 @@
+import 'package:backpacking/screens/profile_screen.dart';
 import 'package:backpacking/screens/search_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class _BottomBarState extends State<BottomBar> {
     const HomeScreen(),
     const SearchScreen(),
     const TicketScreen(),
-    const Text("Profile")
+    const ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
