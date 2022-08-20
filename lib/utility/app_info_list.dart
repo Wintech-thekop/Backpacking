@@ -55,7 +55,7 @@ List<Map<String, dynamic>> ticketList = [
     },
     'to': {
       'code': "TYO",
-      'name': "London"
+      'name': "Tokyo"
     },
     'flying_time': '6H 15M',
     'date': "1 SEP",

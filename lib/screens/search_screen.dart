@@ -2,6 +2,7 @@ import 'package:backpacking/utility/app_layout.dart';
 import 'package:backpacking/utility/app_styles.dart';
 import 'package:backpacking/widgets/double_text_widget.dart';
 import 'package:backpacking/widgets/icon_text_widget.dart';
+import 'package:backpacking/widgets/ticket_tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -20,50 +21,52 @@ class SearchScreen extends StatelessWidget {
           Text("What are\nyou looking for?",
               style: Styles.headLineStyle1.copyWith(fontSize: 35)),
           Gap(AppLayout.getHeight(20)),
-          FittedBox(
-            child: Container(
-              padding: const EdgeInsets.all(3.5),
-              child: Row(
-                children: [
-                  /* Airline Ticket */
-                  Container(
-                    width: size.width * 0.44,
-                    padding: EdgeInsets.symmetric(vertical: 7),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(
-                        left: Radius.circular(50),
-                      ),
-                      color: Colors.white,
-                    ),
-                    child: Center(
-                      child: Text("Airline tickets"),
-                    ),
-                  ),
+          // FittedBox(
+          //   child: Container(
+          //     padding: const EdgeInsets.all(3.5),
+          //     child: Row(
+          //       children: [
+          //         /* Airline Ticket */
+          //         Container(
+          //           width: size.width * 0.44,
+          //           padding: EdgeInsets.symmetric(vertical: 7),
+          //           decoration: BoxDecoration(
+          //             borderRadius: BorderRadius.horizontal(
+          //               left: Radius.circular(50),
+          //             ),
+          //             color: Colors.white,
+          //           ),
+          //           child: Center(
+          //             child: Text("Airline tickets"),
+          //           ),
+          //         ),
 
-                  /* Hogtel Ticket */
-                  Container(
-                    width: size.width * 0.44,
-                    padding: EdgeInsets.symmetric(vertical: 7),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(
-                        right: Radius.circular(50),
-                      ),
-                      color: Colors.transparent,
-                    ),
-                    child: Center(
-                      child: Text("Hotels"),
-                    ),
-                  ),
-                ],
-              ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(
-                  AppLayout.getHeight(50),
-                ),
-                color: const Color(0xFFF4F6FD),
-              ),
-            ),
-          ),
+          //         /* Hogtel Ticket */
+          //         Container(
+          //           width: size.width * 0.44,
+          //           padding: EdgeInsets.symmetric(vertical: 7),
+          //           decoration: BoxDecoration(
+          //             borderRadius: BorderRadius.horizontal(
+          //               right: Radius.circular(50),
+          //             ),
+          //             color: Colors.transparent,
+          //           ),
+          //           child: Center(
+          //             child: Text("Hotels"),
+          //           ),
+          //         ),
+          //       ],
+          //     ),
+          //     decoration: BoxDecoration(
+          //       borderRadius: BorderRadius.circular(
+          //         AppLayout.getHeight(50),
+          //       ),
+          //       color: const Color(0xFFF4F6FD),
+          //     ),
+          //   ),
+          // ),
+
+          const TicketTabs(firstTab: "Airline tickets", secondTab: "Hotels"),
           Gap(AppLayout.getHeight(25)),
           const IconTextWidget(
               icon: Icons.flight_takeoff_rounded, text: "Departure"),
@@ -133,7 +136,7 @@ class SearchScreen extends StatelessWidget {
                         width: size.width * 0.44,
                         height: AppLayout.getHeight(200),
                         decoration: BoxDecoration(
-                          color: Color(0xFF2CD3D1),
+                          color: const Color(0xFF2CD3D1),
                           borderRadius:
                               BorderRadius.circular(AppLayout.getHeight(18)),
                         ),
@@ -168,7 +171,7 @@ class SearchScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border:
-                                Border.all(width: 18, color: Color(0xFF189999)),
+                                Border.all(width: 18, color: const Color(0xFF189999)),
                             color: Colors.transparent,
                           ),
                         ),
@@ -180,7 +183,7 @@ class SearchScreen extends StatelessWidget {
                     width: size.width * 0.44,
                     height: AppLayout.getHeight(210),
                     decoration: BoxDecoration(
-                      color: Color(0xFFEC743C),
+                      color: const Color(0xFFEC743C),
                       borderRadius:
                           BorderRadius.circular(AppLayout.getHeight(18)),
                     ),
